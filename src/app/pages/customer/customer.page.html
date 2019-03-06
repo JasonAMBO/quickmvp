@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Customers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let cust of custList">
+      <ion-icon [name]="ion-list" slot="start"></ion-icon>
+      {{cust.custFirstName}}
+      <div class="item-note" slot="end">
+        {{cust.custLastName}} 
+      </div>
+    </ion-item>
+  </ion-list>
+  
+    <div *ngIf="selectedItem" padding>
+      You navigated here from <b>{{selectedItem.title }}</b>
+    </div>
+ 
+</ion-content>
